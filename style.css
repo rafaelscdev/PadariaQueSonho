@@ -1,0 +1,243 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f0e3;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+    background-color: #d1a980;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    color: #748873;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #748873;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #556b2f;
+}
+
+/* Dropdown */
+nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d1a980;
+    border: 1px solid #8b6743;
+    z-index: 1;
+}
+
+nav li:hover ul {
+    display: block;
+}
+
+nav li ul li {
+    display: block;
+    margin: 0;
+    color: #748873;
+}
+
+/* Barra de pesquisa */
+form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #748873;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Seção "Sobre Nós" */
+#sobre-nos {
+    padding: 40px 0;
+    background-color: #f8f0e3;
+}
+
+#sobre-nos .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobre-nos .coluna {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#sobre-nos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#sobre-nos h2 {
+    color: #748873;
+}
+
+/* Seção de produtos */
+#produtos {
+    padding: 40px 0;
+    background-color: #f8f0e3;
+}
+
+#produtos .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#produtos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #748873;
+}
+
+.produtos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.produto img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    margin-bottom: 10px;
+    color: #FFB347;
+}
+
+.produto p {
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: #748873;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Rodapé */
+footer {
+    background-color: #748873;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (min-width: 1024px) {
+    .produto {
+        width: 32%;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .produto {
+        width: 48%;
+    }
+}
+
+@media (max-width: 640px) {
+    .produto {
+        width: 100%;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    form {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 80px);
+    }
+
+    button[type="submit"] {
+        width: 80px;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul ul {
+        position: relative;
+        top: auto;
+        left: auto;
+        background-color: #d1a980;
+        border: 1px solid #8b6743;
+    }
+
+    #sobre-nos .coluna {
+        width: 100%;
+        text-align: center;
+    }
+}
